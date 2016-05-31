@@ -1,0 +1,167 @@
+/**
+ * Class
+ */
+Naming rules:
+	Must start with a letter or underscore
+	Remaining must be letters, numbers, underscores
+	No length limit
+
+Class Naming Best Practices
+	* UpperCamel
+		FirstLetterOfEachWordCapitalized
+	* Variables
+		lowercase (easy to tell apart)
+	* Avoid the world "class"
+	
+/**
+ * Property
+ */
+Naming rules:
+	Must start with a letter or underscore
+	Remaining must be letters, numbers, underscores
+	
+Property Naming Best Practices
+	* lowerCamel
+		firstLetterLowercase
+		remainingWordsCapitalized
+	* Avoid starting with underscore
+		Indicates private access
+	** Scope
+		public : nothig different.
+		protected : start with underscore _
+				
+		
+	
+/**
+ * Method
+ */
+Naming rules:
+	Must start with a letter or underscore
+	Remaining must be letters, numbers, underscores
+	
+Method Naming Best Practices
+	* lowerCamel
+		firstLetterLowercase
+		remainingWordsCapitalized
+
+/**
+ * Constant
+ */
+Naming rules:
+	Must start with a letter or underscore
+	Remaining must be letters, numbers, underscores
+	
+Method Naming Best Practices
+	* CAPITAL_LETTERS_SEPERATED_BY_UNDERSCORES
+
+/**
+ * Database - Table
+ */
+
+
+ /**
+  * Database - Table.Fields
+  */
+Naming rules:
+    * Single column primary key fields should be named id.
+    * Foreign key fields should be a combination of the name of the referenced table
+        and the name of the referenced fields. Ex: foo_id.
+    * Prefixes and Suffixes (are bad)
+    Ex: naming tables with a TB_ , etc.   prefix is a bad idea.
+    Ex: our app "Foobar" would have tables name Foobar_Users, Foobar_Teams, etc.
+        Again, this is a bad idea.
+    Ex: data types to suffixes, text -> tx, date -> dt, etc. is a bad idea.
+    * Avoid quotes and  use Lowercase. Identifiers should be written entirely in lower case.
+    Ex: Avoid using names like "FirstName" or "All Employees".
+    Ex: Use first_name, not "First_Name".
+    * Avoid reserved words and Data types are not names. Avoid using words that are just data types such as text or timestamp.
+    Ex: Avoid using words like user, lock, or table.
+    * Underscores separate words. Object name that are comprised of multiple words should be
+        separated by underscores (ie. snake case).
+    Ex: Use word_count or team_member_id, not wordcount or wordCount.
+    * Full words, not abbreviations.
+    Ex: Use middle_name, not mid_nm.
+
+ /**
+  * Database - Singular Relations
+  */
+Naming rules:
+    * Tables, views, and other relations that hold data should have singular names,
+        not plural. Ex: team, not teams.
+    * All joins should be explicit
+    Ex: not like this => SELECT person.*,card.* from person, card
+
+
+
+
+
+/**********************************************************************
+
+/**
+* scope
+*/
+	/**
+	 * Private
+	*/  
+	class scope.
+
+	/**
+	 * Protected
+	*/
+	class + child
+
+	/**
+	 * Public
+	*/
+	everywhere
+************************************************************************/
+
+
+
+/**********************************************************************
+/**
+* storage duration
+*/
+	1. static or shared variable -> Class-level variable. Memory is allocated for these variable only once in the program.
+		* static does not mean constant or fixed, can  as dynamic
+		
+	2. not-static variable -> Memory is allocated multiple time whenever a new object is created.
+ 
+************************************************************************/
+
+/**
+* static method
+*/
+static methods : are callable without an instance of the object created.
+example in PHP:
+class test {
+    public function sayHi($hi = "Hi") {
+        $this->hi = $hi;
+        return $this->hi;
+    }
+}
+
+/**
+* sayHi in test1 is static method.
+*/
+class test1 {
+    public static function sayHi($hi) {
+        $hi = "Hi";
+        return $hi;
+    }
+}
+
+//  Test
+$mytest = new test();
+print $mytest->sayHi('hello');  // returns 'hello'
+print test1::sayHi('hello');    //  returns 'hello'
+
+*******************************************************************/
+/**
+* abstract class
+*/
+	vb.net : MustInherit
+	c# or Java : abstract
+	does not let parrent class instantite
+	     
+*******************************************************************/		 
